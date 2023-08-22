@@ -1,0 +1,39 @@
+{
+  "name": "rx-timeline",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "watch": {
+    "build": {
+      "patterns": [
+        "rx-timeline/*.html"
+      ],
+      "extensions": "html"
+    }
+  },
+  "scripts": {
+    "prebuild-dev": "shx rm -rf dist/*",
+    "build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
+    "prebuild": "shx rm -rf dist/*",
+    "build": "parcel build ./src/index.html ./src/*.html ./src/*.png --public-url ./",
+    "start": "parcel ./src/*.html",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose",
+    "build-and-deploy": "npm run build && npm run push-gh-pages && npm run prebuild"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "private": "true",
+  "homepage": "https://stcorbett.github.io/rx-timeline",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.1",
+    "autoprefixer": "^10.4.13",
+    "lodash": "^4.17.21",
+    "npm-watch": "^0.11.0",
+    "parcel": "^2.8.0",
+    "postcss-cli": "^10.1.0",
+    "redwood": "^0.0.1",
+    "stimulus-reveal-controller": "^4.1.0",
+    "stimulus-use": "^0.52.0",
+    "tailwindcss": "^3.2.4"
+  }
+}
