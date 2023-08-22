@@ -18,7 +18,7 @@
     "build": "parcel build ./src/index.html ./src/*.html ./src/*.png --public-url ./",
     "start": "parcel ./src/*.html",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose",
-    "build-and-deploy": "npm run build && npm run push-gh-pages && npm run prebuild"
+    "build-and-deploy": "npm run prebuild && npm run build && npm run push-gh-pages && npm run prebuild"
   },
   "author": "",
   "license": "UNLICENSED",
