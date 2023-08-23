@@ -14,13 +14,13 @@
 
     <div class="patentthicketing flex flex-col items-center" data-controller="showhide">
       <div class="w-full relative flex flex-col items-center" data-showhide-target="toggle">
-        <div class="placeholder h-28">
+        <div class="placeholder hidden md:block h-28">
 
         </div>
-        <div class="w-full flex justify-between pt-12 relative">
-          <div class="absolute h-full w-[2px] bg-black bottom-0 left-[50%] right-[50%]"></div>
-          <img class="w-[45%]" src='images/thicketing-humalog-before.png' alt="">
-          <img class="w-[45%]" src='images/thicketing-novolog-before.png' alt="">
+        <div class="w-full flex flex-col md:flex-row items-center justify-between md:pt-12 relative">
+          <div class="absolute h-full w-[2px] bg-black bottom-0 left-[50%] right-[50%] hidden md:block"></div>
+          <img class="w-full sm:w-[70%] md:w-[45%] pb-8 md:pb-0" src='images/thicketing-humalog-before.png' alt="">
+          <img class="w-full sm:w-[70%] md:w-[45%]" src='images/thicketing-novolog-before.png' alt="">
         </div>
       </div>
 
@@ -28,33 +28,27 @@
         <div class="placeholder hidden lg:block h-28 mb-4">
 
         </div>
-        <div class="lg:absolute top-0 text-3xl font-thin text-center mb-4">
+        <div class="lg:absolute top-0 text-lg md:text-3xl font-thin text-center mb-4">
           Through a combination of patents on compounds, formulation, and injection devices, insulin manufacturers are able to maintain market share and price:
         </div>
-        <div class="w-full flex justify-between pt-12 relative">
-          <div class="absolute h-full w-[2px] bg-black bottom-0 left-[50%] right-[50%]"></div>
-          <div class="w-[47.2%] relative">
-            <div class="absolute -top-12 w-full text-center font-semibold text-lg">
+
+        <div class="w-full flex flex-col md:flex-row items-center justify-between relative md:pt-12">
+          <div class="absolute h-full w-[2px] bg-black bottom-0 left-[50%] right-[50%] hidden md:block"></div>
+
+          <div class="w-full sm:w-[70%] md:w-[47.2%] relative pt-12 md:pt-0 md:pb-0">
+            <div class="absolute top-0 md:-top-12 w-full text-center font-semibold md:text-lg">
               Example: Humalog and its KwikPen
             </div>
 
-            <div class="absolute top-6 w-full text-center font-semibold">
-              (Insulin patent expired)
-            </div>
-
-            <img class="w-full" src='images/thicketing-humalog-after.png' alt="">
+            <img class="w-full" src='images/thicketing-03.png' alt="">
           </div>
 
-          <div class="w-[47.2%] relative">
-            <div class="absolute -top-12 w-full text-center font-semibold text-lg">
+          <div class="w-full sm:w-[70%] md:w-[47.2%] relative pt-12 md:pt-0">
+            <div class="absolute top-0 md:-top-12 w-full text-center font-semibold md:text-lg">
               Example: NovoLog and its FlexPen
             </div>
 
-            <div class="absolute top-6 left-[20%] text-center font-semibold">
-              (Insulin patent expired)
-            </div>
-
-            <img class="w-full" src='images/thicketing-novolog-after.png' alt="">
+            <img class="w-full" src='images/thicketing-04.png' alt="">
           </div>
         </div>
       </div>
