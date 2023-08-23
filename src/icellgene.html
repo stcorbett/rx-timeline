@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="./index.js"></script>
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/drc0fxv.css"> -->
+
+    <title>RX Timelines</title>
+  </head>
+
+  <body class="relative p-12 bg-[#f6f4f1]">
+    <div class="icellgene" data-controller="nav">
+      <div class="text-sm font-semibold flex space-x-12 border-b-2 border-[#C9C9C9]">
+        <div
+          class="pb-4 cursor-pointer -mb-0.5 border-b-[5px] border-[#e55b24]"
+          data-nav-target="link"
+          data-action="click->nav#navigate"
+        >
+          Cell therapy
+        </div>
+        <div class="pb-4 cursor-pointer" data-nav-target="link" data-action="click->nav#navigate">
+          Gene therapy
+        </div>
+        <div class="pb-4 cursor-pointer" data-nav-target="link" data-action="click->nav#navigate">
+          Cell-based gene therapy
+        </div>
+      </div>
+
+      <div class="mt-4 w-full" data-nav-target="display">
+        <div class="w-full" data-nav-target="page">
+          <img src='images/gct-01.svg' alt="">
+        </div>
+
+        <div class="hidden w-full" data-nav-target="page">
+          <img src='images/gct-02.svg' alt="">
+        </div>
+
+        <div class="hidden w-full" data-nav-target="page">
+          <img src='images/gct-03.svg' alt="">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
