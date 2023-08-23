@@ -58,3 +58,11 @@ body {
 .paragraph-content {
   @apply text-[#615753] text-lg
 }
+
+.iofflabel .grid .header, .iofflabel .grid .value {
+  @apply flex items-center
+}
+
+.iofflabel .grid .header {
+  @apply justify-end
+}

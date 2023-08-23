@@ -10,10 +10,121 @@
     <title>RX Timelines</title>
   </head>
 
-  <body
-    class="relative"
-    data-controller=""
-    data-action=""
-  >
+  <body class="relative p-12 bg-[#f6f4f1]">
+
+    <div class="iofflabel flex flex-col items-center" data-controller="showhide">
+      <div class="hidden w-full" data-showhide-target="toggle">
+        <div class="w-full flex justify-between">
+          <img class="w-[45%] pb-[35px]" src='images/off-label-lucentis.png' alt="">
+          <img class="w-[45%] pt-[33px]" src='images/off-label-avastin.png' alt="">
+        </div>
+      </div>
+
+      <div class="w-full relative flex justify-center" data-showhide-target="toggle">
+        <div class="w-full flex justify-between">
+          <img class="w-[45%] pb-[35px]" src='images/off-label-lucentis.png' style="filter: blur(4px);" alt="">
+          <img class="w-[45%] pt-[33px]" src='images/off-label-avastin.png' style="filter: blur(4px);" alt="">
+        </div>
+
+        <div class="absolute w-3/4 top-20 border-2 border-[#4d4d4d] grid grid-cols-3 bg-white p-3 pt-5 text-sm text-gray-500">
+          <div class="absolute top-1 right-2 cursor-pointer" data-action="click->showhide#toggle">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M6.225 4.811a1 1 0 00-1.414 1.414L10.586 12 4.81 17.775a1 1 0 101.414 1.414L12 13.414l5.775 5.775a1 1 0 001.414-1.414L13.414 12l5.775-5.775a1 1 0 00-1.414-1.414L12 10.586 6.225 4.81z"></path>
+            </svg>
+          </div>
+
+          <div class="pr-12 py-2 text-[#4d4d4d] text-right border-b-2 border-[#C9C9C9]">
+          </div>
+          <div class="text-xl py-2 text-[#4d4d4d] font-semibold border-b-2 border-[#C9C9C9]">
+            Lucentis
+          </div>
+          <div class="text-xl py-2 text-[#4d4d4d] font-semibold border-b-2 border-[#C9C9C9]">
+            Avastin
+          </div>
+
+          <div class="header pr-12 py-2 text-[#4d4d4d] text-right text-md font-semibold border-b border-[#C9C9C9]">
+            Prescribed for wet AMD:
+          </div>
+          <div class="value py-2 pr-8 border-b border-[#C9C9C9]">
+            <div class="bg-[#e55b24] text-white font-medium py-2 w-full flex justify-center">
+              On-label
+            </div>
+          </div>
+          <div class="value py-2 pr-8 border-b border-[#C9C9C9]">
+            <div class="bg-[#3d687e] text-white font-medium py-2 w-full flex justify-center">
+              Off-label
+            </div>
+          </div>
+
+          <div class="header pr-12 py-2 text-[#4d4d4d] text-right text-md font-semibold border-b border-[#C9C9C9]">
+            FDA approval:
+          </div>
+          <div class="value py-2 border-b border-[#C9C9C9]">
+            <img class="w-7" src='images/off-label_check.svg' alt="">
+            <div class="pl-2">
+              For wet AMD (2006)
+            </div>
+          </div>
+          <div class="value py-2 border-b border-[#C9C9C9]">
+            <img class="w-7" src='images/off-label_check.svg' alt="">
+            <div class="pl-2">
+              For colon cancer (2004)
+            </div>
+          </div>
+
+          <div class="header pr-12 py-2 text-[#4d4d4d] text-right text-md font-semibold border-b border-[#C9C9C9]">
+            Efficacy and safety when treating wet AMD:
+          </div>
+          <div class="value py-2 border-b border-[#C9C9C9]">
+            <img class="w-7" src='images/off-label_equal.svg' alt="">
+            <div class="pl-2">
+              Equal
+            </div>
+          </div>
+          <div class="value py-2 border-b border-[#C9C9C9]">
+            <img class="w-7" src='images/off-label_equal.svg' alt="">
+            <div class="pl-2">
+              Equal
+            </div>
+          </div>
+
+          <div class="header pr-12 py-2 text-[#4d4d4d] text-right text-md font-semibold">
+            Cost:
+          </div>
+          <div class="value py-2 -ml-[30px]">
+            <img class="w-[58px]" src='images/off-label_more-expensive.svg' alt="">
+            <div class="pl-2">
+              Much more expenstive
+            </div>
+          </div>
+          <div class="value py-2 ">
+            <img class="w-7" src='images/off-label_less-expensive.svg' alt="">
+            <div class="pl-2">
+              Less expensive
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="mt-12 bg-[#1a1718] text-white font-medium text-sm p-3 px-7 rounded-full cursor-pointer"
+            data-action="click->showhide#toggle"
+            data-showhide-target="toggle"
+      >
+        Prescribe for wet AMD
+      </div>
+      <div class="hidden flex mt-12 bg-[#1a1718] text-white font-medium text-sm p-3 px-5 rounded-full cursor-pointer"
+            data-action="click->showhide#toggle"
+            data-showhide-target="toggle"
+      >
+        <div class="pr-6">
+          Close
+        </div>
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M6.225 4.811a1 1 0 00-1.414 1.414L10.586 12 4.81 17.775a1 1 0 101.414 1.414L12 13.414l5.775 5.775a1 1 0 001.414-1.414L13.414 12l5.775-5.775a1 1 0 00-1.414-1.414L12 10.586 6.225 4.81z"></path>
+        </svg>
+      </div>
+
+    </div>
   </body>
 </html>
