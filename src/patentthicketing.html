@@ -10,10 +10,73 @@
     <title>RX Timelines</title>
   </head>
 
-  <body
-    class="relative"
-    data-controller=""
-    data-action=""
-  >
+  <body class="relative p-12 bg-[#f6f4f1]">
+
+    <div class="patentthicketing flex flex-col items-center" data-controller="showhide">
+      <div class="w-full relative flex flex-col items-center" data-showhide-target="toggle">
+        <div class="placeholder h-28">
+
+        </div>
+        <div class="w-full flex justify-between pt-12 relative">
+          <div class="absolute h-full w-[2px] bg-black bottom-0 left-[50%] right-[50%]"></div>
+          <img class="w-[45%]" src='images/thicketing-humalog-before.png' alt="">
+          <img class="w-[45%]" src='images/thicketing-novolog-before.png' alt="">
+        </div>
+      </div>
+
+      <div class="hidden w-full relative flex flex-col items-center" data-showhide-target="toggle">
+        <div class="placeholder hidden lg:block h-28 mb-4">
+
+        </div>
+        <div class="lg:absolute top-0 text-3xl font-thin text-center mb-4">
+          Through a combination of patents on compounds, formulation, and injection devices, insulin manufacturers are able to maintain market share and price:
+        </div>
+        <div class="w-full flex justify-between pt-12 relative">
+          <div class="absolute h-full w-[2px] bg-black bottom-0 left-[50%] right-[50%]"></div>
+          <div class="w-[47.2%] relative">
+            <div class="absolute -top-12 w-full text-center font-semibold text-lg">
+              Example: Humalog and its KwikPen
+            </div>
+
+            <div class="absolute top-6 w-full text-center font-semibold">
+              (Insulin patent expired)
+            </div>
+
+            <img class="w-full" src='images/thicketing-humalog-after.png' alt="">
+          </div>
+
+          <div class="w-[47.2%] relative">
+            <div class="absolute -top-12 w-full text-center font-semibold text-lg">
+              Example: NovoLog and its FlexPen
+            </div>
+
+            <div class="absolute top-6 left-[20%] text-center font-semibold">
+              (Insulin patent expired)
+            </div>
+
+            <img class="w-full" src='images/thicketing-novolog-after.png' alt="">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mt-12 bg-[#1a1718] text-white font-medium text-sm p-3 px-7 rounded-full cursor-pointer"
+            data-action="click->showhide#toggle"
+            data-showhide-target="toggle"
+      >
+        Show the Patents
+      </div>
+      <div class="hidden flex mt-12 bg-[#1a1718] text-white font-medium text-sm p-3 px-5 rounded-full cursor-pointer"
+            data-action="click->showhide#toggle"
+            data-showhide-target="toggle"
+      >
+        <div class="pr-6">
+          Close
+        </div>
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M6.225 4.811a1 1 0 00-1.414 1.414L10.586 12 4.81 17.775a1 1 0 101.414 1.414L12 13.414l5.775 5.775a1 1 0 001.414-1.414L13.414 12l5.775-5.775a1 1 0 00-1.414-1.414L12 10.586 6.225 4.81z"></path>
+        </svg>
+      </div>
+    </div>
   </body>
 </html>
