@@ -7,6 +7,8 @@ export default class extends Controller {
   }
 
   toggle(e) {
+    e.preventDefault()
+
     this.toggleTargets.forEach((link, index ) => {
       link.classList.toggle("hidden")
     })

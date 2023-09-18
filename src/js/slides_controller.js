@@ -8,6 +8,8 @@ export default class extends Controller {
   }
 
   advance(e) {
+    e.preventDefault()
+
     this.slideIndex += 1
     if(this.slideIndex > (this.slideTargets.length - 1)) this.slideIndex = 0
 

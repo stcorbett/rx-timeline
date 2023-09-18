@@ -11,21 +11,23 @@
   </head>
 
   <body class="relative p-12 bg-[#f6f4f1]">
-    <div class="icellgene" data-controller="nav">
+    <div class="icellgene" data-controller="nav" aria-live="assertive">
       <div class="text-sm font-semibold flex space-x-12 border-b-2 border-[#C9C9C9]">
-        <div
+        <a
+          href=''
           class="pb-4 cursor-pointer -mb-0.5 border-b-[5px] border-[#e65e28]"
           data-nav-target="link"
           data-action="click->nav#navigate"
+          tabindex='0'
         >
           Cell therapy
-        </div>
-        <div class="pb-4 cursor-pointer" data-nav-target="link" data-action="click->nav#navigate">
+        </a>
+        <a href='' class="pb-4 cursor-pointer" data-nav-target="link" data-action="click->nav#navigate" tabindex='0'>
           Gene therapy
-        </div>
-        <div class="pb-4 cursor-pointer" data-nav-target="link" data-action="click->nav#navigate">
+        </a>
+        <a href='' class="pb-4 cursor-pointer" data-nav-target="link" data-action="click->nav#navigate" tabindex='0'>
           Cell-based gene therapy
-        </div>
+        </a>
       </div>
 
       <div class="mt-4 w-full" data-nav-target="display">

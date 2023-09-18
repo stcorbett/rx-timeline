@@ -7,12 +7,13 @@ export default class extends Controller {
   }
 
   navigate(e) {
+    e.preventDefault()
+
     this.linkTargets.forEach((link, index ) => {
       link.classList.remove("-mb-0.5", "border-b-[5px]", "border-[#e65e28]")
     })
 
     e.currentTarget.classList.add("-mb-0.5", "border-b-[5px]", "border-[#e65e28]")
-
 
     this.pageTargets.forEach((page, index ) => {
       if( index == this.linkTargets.indexOf(e.currentTarget) ) {

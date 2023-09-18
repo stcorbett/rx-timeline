@@ -12,7 +12,7 @@
 
   <body class="relative p-4 md:p-12 bg-[#f6f4f1]">
 
-    <div class="iofflabel flex flex-col items-center" data-controller="showhide">
+    <div class="iofflabel flex flex-col items-center" data-controller="showhide" aria-live="assertive">
       <div class="w-full" data-showhide-target="toggle">
         <div class="w-full flex justify-between">
           <img class="w-[45%] pb-[3.5%]" src='images/off-label-lucentis.png' alt="Illustration of a syringe and vial of Lucentis, a drug used to treat the eye condition, wet age-related macular degeneration, as an example of an on-label prescription.">
@@ -27,11 +27,11 @@
         </div>
 
         <div class="relative order-first lg:order-last z-10 w-full md:w-[85%] lg:w-3/4 mt-12 lg:mt-0 lg:absolute lg:top-20 border-2 border-[#4d4d4d] grid grid-cols-3 bg-white p-3 pt-5 text-gray-500 text-xs tablet:text-sm">
-          <div class="absolute top-1 right-2 cursor-pointer" data-action="click->showhide#toggle">
+          <a href='' aria-label='close' class="absolute top-1 right-2 cursor-pointer" data-action="click->showhide#toggle">
             <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24">
               <path fill="currentColor" d="M6.225 4.811a1 1 0 00-1.414 1.414L10.586 12 4.81 17.775a1 1 0 101.414 1.414L12 13.414l5.775 5.775a1 1 0 001.414-1.414L13.414 12l5.775-5.775a1 1 0 00-1.414-1.414L12 10.586 6.225 4.81z"></path>
             </svg>
-          </div>
+          </a>
 
           <div class="pr-12 py-2 text-[#4d4d4d] text-right border-b-2 border-[#C9C9C9]">
           </div>
@@ -107,16 +107,18 @@
         </div>
       </div>
 
-      <div class="mt-12 bg-[#1a1718] text-white font-medium text-sm p-3 px-7 rounded-full cursor-pointer"
+      <a href="" class="mt-12 bg-[#1a1718] text-white font-medium text-sm p-3 px-7 rounded-full cursor-pointer hover:bg-[#C54511] transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             data-action="click->showhide#toggle"
             data-showhide-target="toggle"
+            tabindex='0'
       >
         Prescribe for wet AMD
-      </div>
+      </a>
 
-      <div class="hidden flex mt-12 bg-[#1a1718] text-white font-medium text-sm p-3 px-5 rounded-full cursor-pointer"
+      <a href="" class="hidden flex mt-12 bg-[#1a1718] text-white font-medium text-sm p-3 px-5 rounded-full cursor-pointer hover:bg-[#C54511] transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             data-action="click->showhide#toggle"
             data-showhide-target="smToggle"
+            tabindex='0'
       >
         <div class="pr-6">
           Close
@@ -124,7 +126,7 @@
         <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24">
           <path fill="currentColor" d="M6.225 4.811a1 1 0 00-1.414 1.414L10.586 12 4.81 17.775a1 1 0 101.414 1.414L12 13.414l5.775 5.775a1 1 0 001.414-1.414L13.414 12l5.775-5.775a1 1 0 00-1.414-1.414L12 10.586 6.225 4.81z"></path>
         </svg>
-      </div>
+      </a>
 
     </div>
   </body>
