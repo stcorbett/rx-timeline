@@ -66,3 +66,11 @@ body {
 .iofflabel .grid .header {
   @apply justify-end
 }
+
+.interactive-title {
+  @apply text-title-color text-[28px] font-medium leading-[37.24px]
+}
+
+.interactive-content {
+  @apply text-[18px] font-normal leading-[25.2px]
+}
