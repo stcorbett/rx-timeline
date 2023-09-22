@@ -86,3 +86,11 @@ body {
 .interactive-button {
   @apply bg-title-color text-white font-extrabold text-[16px] leading-[24px] p-3 px-7 rounded-full cursor-pointer hover:bg-[#C54511] transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
 }
+
+.interactive-button svg {
+  @apply static text-white animate-none
+}
+
+a.interactive-button:hover:not([disabled]) svg {
+  @apply animate-none
+}
