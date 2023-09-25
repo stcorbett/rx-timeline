@@ -88,9 +88,18 @@ body {
 }
 
 .interactive-button svg {
-  @apply static text-white animate-none
+  @apply text-white
 }
 
-a.interactive-button:hover:not([disabled]) svg {
+.iofflabel a svg {
+  @apply text-gray-500
+}
+
+.interactive-button svg, .iofflabel a svg {
+  @apply static animate-none
+}
+
+a.interactive-button:hover:not([disabled]) svg,
+.iofflabel a svg {
   @apply animate-none
 }
